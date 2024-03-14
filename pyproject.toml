@@ -5,6 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "sockaddr"
 authors = [{name = "tedk", email = "tedk@kpn-cert.nl"}]
+keywords = ["sockaddr", "saddr", "auditd"]
 description = "Prepopulated sockaddr helpers for Python using ctypes"
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}
