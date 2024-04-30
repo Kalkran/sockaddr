@@ -3,7 +3,7 @@ import ctypes
 # Without this, the comments at the end of each field will break
 # fmt:off
 
-class sockaddr_un(ctypes.Structure):
+class sockaddr_un(ctypes.BigEndianStructure):
     """UNIX Socket
 
     man 7 unix
@@ -15,7 +15,7 @@ class sockaddr_un(ctypes.Structure):
     ]
 
 
-class sockaddr_in(ctypes.Structure):
+class sockaddr_in(ctypes.BigEndianStructure):
     """IPv4 Socket
 
     man 7 ip
@@ -31,7 +31,7 @@ class sockaddr_in(ctypes.Structure):
     ]
 
 
-class sockaddr_in6(ctypes.Structure):
+class sockaddr_in6(ctypes.BigEndianStructure):
     """IPv6 Socket
 
     man 7 ipv6
@@ -46,7 +46,7 @@ class sockaddr_in6(ctypes.Structure):
     ]
 
 
-class sockaddr_nl(ctypes.Structure):
+class sockaddr_nl(ctypes.BigEndianStructure):
     """Netlink Socket
 
     man 7 netlink
@@ -60,7 +60,7 @@ class sockaddr_nl(ctypes.Structure):
     ]
 
 
-class sockaddr_x25(ctypes.Structure):
+class sockaddr_x25(ctypes.BigEndianStructure):
     """ITU-T X.25 Socket
 
     man 7 x25
@@ -72,7 +72,7 @@ class sockaddr_x25(ctypes.Structure):
     ]
 
 
-class sockaddr_atalk(ctypes.Structure):
+class sockaddr_atalk(ctypes.BigEndianStructure):
     """AppleTalk Socket
     
     man 7 ddp
@@ -84,7 +84,7 @@ class sockaddr_atalk(ctypes.Structure):
         ("sat_s_node", ctypes.c_ubyte),     # Host node number
     ]
 
-class sockaddr_ll(ctypes.Structure):
+class sockaddr_ll(ctypes.BigEndianStructure):
     """Packet interface on device level
     
     man 7 packet
@@ -101,7 +101,7 @@ class sockaddr_ll(ctypes.Structure):
     ]
 
 
-class sockaddr_storage(ctypes.Structure):
+class sockaddr_storage(ctypes.BigEndianStructure):
 
     _fields_ = [
         ("ss_family", ctypes.c_ushort),     # address family
